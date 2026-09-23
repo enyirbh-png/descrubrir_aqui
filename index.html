@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para ti ♡</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-family: "Georgia", "Times New Roman", serif;
+      color: #e6dccd;
+
+      /* Fondo con imagen y filtro oscuro */
+      background-image:
+        linear-gradient(
+          rgba(0, 0, 0, 0.58),
+          rgba(0, 0, 0, 0.68)
+        ),
+        url("fondo.jpg");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Viñeta para darle aspecto más cinematográfico */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+
+      background: radial-gradient(
+        circle,
+        transparent 35%,
+        rgba(0, 0, 0, 0.45) 100%
+      );
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+
+      width: min(90%, 420px);
+
+      background: rgba(18, 16, 15, 0.72);
+
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+
+      border: 1px solid rgba(166, 125, 98, 0.55);
+      border-radius: 10px;
+
+      padding: 2.5rem 2rem;
+      text-align: center;
+
+      box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.55),
+        inset 0 0 25px rgba(255, 255, 255, 0.025);
+    }
+
+    .symbol {
+      font-size: 1.6rem;
+      color: #b45a5a;
+      margin-bottom: 0.6rem;
+      text-shadow: 0 0 12px rgba(180, 90, 90, 0.35);
+    }
+
+    h1 {
+      margin: 0.5rem 0 1.2rem;
+      font-size: 1.9rem;
+      font-weight: normal;
+      color: #e9dfd2;
+      letter-spacing: 0.5px;
+    }
+
+    p {
+      margin: 0 auto 2rem;
+      max-width: 330px;
+      line-height: 1.7;
+      font-size: 1rem;
+      color: #d9c7b0;
+    }
+
+    button {
+      background: rgba(43, 29, 26, 0.85);
+      color: #e6dccd;
+      border: 1px solid #a33;
+      border-radius: 6px;
+      padding: 0.75rem 1.7rem;
+      font-size: 1rem;
+      font-family: inherit;
+      cursor: pointer;
+      transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      background-color: rgba(61, 42, 39, 0.95);
+      transform: translateY(-2px);
+      box-shadow: 0 0 15px rgba(163, 51, 51, 0.45);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 480px) {
+      body {
+        background-attachment: scroll;
+      }
+      .card {
+        width: 88%;
+        padding: 2rem 1.5rem;
+      }
+      h1 {
+        font-size: 1.55rem;
+      }
+      p {
+        font-size: 0.95rem;
+      }
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="symbol">♡</div>
+    <h1>Para ti ♡</h1>
+    <p>
+      Un pequeño recordatorio de que también mereces momentos bonitos ♡
+    </p>
+    <button onclick="window.location.href='https://youtu.be/Gb1FrnjlXoo?si=tzgDeioBq4J4us26'">
+      Descubrir
+    </button>
+  </div>
+</body>
+</html>
